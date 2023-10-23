@@ -72,7 +72,7 @@ def draw_landmarks_on_image(rgb_image):
     except:
       return rgb_image
 
-model_asset_path='face_landmarker.task'
+model_asset_path='/model/face_landmarker.task'
 
 options = FaceLandmarkerOptions(
     base_options=BaseOptions(model_asset_path),
