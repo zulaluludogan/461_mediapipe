@@ -22,10 +22,6 @@ def print_result(result: HandLandmarkerResult, output_image: mp.Image, timestamp
     global RESULT
     RESULT = result
     # print('Hand landmarker result:\n {}'.format(RESULT.hand_landmarks))
-    
-    if RESULT.hand_landmarks!=[]:
-        print('HandLandmark.INDEX_FINGER_TIP result:\n {}'.format(RESULT.hand_landmarks[0][8]) )#(HandLandmark.INDEX_FINGER_TIP=8)
-        px, py, pz = RESULT.hand_landmarks[0][8].x ,RESULT.hand_landmarks[0][8].y , RESULT.hand_landmarks[0][8].z   # GET INDEX_FINGER POSITION
         
 
 def draw_landmarks_on_image(rgb_image):
@@ -82,4 +78,6 @@ with HandLandmarker.create_from_options(options) as landmarker:
         if cv2.waitKey(5) & 0xFF == 27:
             break    
     
-  
+        if RESULT.hand_landmarks!=[]:
+            print('HandLandmark.INDEX_FINGER_TIP result:\n {}'.format(RESULT.hand_landmarks[0][8]) )#(HandLandmark.INDEX_FINGER_TIP=8)
+            px, py, pz = RESULT.hand_landmarks[0][8].x ,RESULT.hand_landmarks[0][8].y , RESULT.hand_landmarks[0][8].z   # GET INDEX_FINGER POSITION       

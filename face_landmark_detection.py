@@ -22,10 +22,6 @@ def print_result(result: FaceLandmarkerResult, output_image: mp.Image, timestamp
     global RESULT
     RESULT = result
     # print('face landmarker result:\n{}'.format(result)) #468 landmark
-    if RESULT.face_landmarks!=[]:
-        print('FaceLandmark.upperMOUTH position:\n {}'.format(RESULT.face_landmarks[0][13]) )#(HandLandmark.INDEX_FINGER_TIP=8)
-        print('FaceLandmark.lowerMOUTH position:\n {}'.format(RESULT.face_landmarks[0][14]) )#(HandLandmark.INDEX_FINGER_TIP=8)
-        px, py, pz = RESULT.face_landmarks[0][13].x ,RESULT.face_landmarks[0][13].y , RESULT.face_landmarks[0][13].z   # GET MOUTH POSITION
 
 def draw_landmarks_on_image(rgb_image):
     try:
@@ -100,3 +96,7 @@ with FaceLandmarker.create_from_options(options) as landmarker:
         
         if cv2.waitKey(5) & 0xFF == 27:
             break  
+        if RESULT.face_landmarks!=[]:
+            print('FaceLandmark.upperMOUTH position:\n {}'.format(RESULT.face_landmarks[0][13]) )#(HandLandmark.INDEX_FINGER_TIP=8)
+            print('FaceLandmark.lowerMOUTH position:\n {}'.format(RESULT.face_landmarks[0][14]) )#(HandLandmark.INDEX_FINGER_TIP=8)
+            px, py, pz = RESULT.face_landmarks[0][13].x ,RESULT.face_landmarks[0][13].y , RESULT.face_landmarks[0][13].z   # GET MOUTH POSITION
