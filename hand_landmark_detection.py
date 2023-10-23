@@ -80,4 +80,10 @@ with HandLandmarker.create_from_options(options) as landmarker:
     
         if RESULT.hand_landmarks!=[]:
             print('HandLandmark.INDEX_FINGER_TIP result:\n {}'.format(RESULT.hand_landmarks[0][8]) )#(HandLandmark.INDEX_FINGER_TIP=8)
-            px, py, pz = RESULT.hand_landmarks[0][8].x ,RESULT.hand_landmarks[0][8].y , RESULT.hand_landmarks[0][8].z   # GET INDEX_FINGER POSITION       
+            
+            # GET INDEX_FINGER POSITION       
+            px, py, pz = RESULT.hand_landmarks[0][8].x ,RESULT.hand_landmarks[0][8].y , RESULT.hand_landmarks[0][8].z   
+
+
+
+
