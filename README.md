@@ -1,6 +1,6 @@
 # 461_mediapipe
 
-Mediapipe project for ME461 course
+Mediapipe project for the course ME461
 
 -https://developers.google.com/mediapipe/solutions/vision/hand_landmarker/python
 
