@@ -56,7 +56,7 @@ def draw_landmarks_on_image(rgb_image):
 
 
 options = HandLandmarkerOptions(
-    base_options=BaseOptions(model_asset_path='/model/hand_landmarker.task'),
+    base_options=BaseOptions(model_asset_path='hand_landmarker.task'),
     running_mode=VisionRunningMode.LIVE_STREAM,
     num_hands =1,
     result_callback=print_result)
