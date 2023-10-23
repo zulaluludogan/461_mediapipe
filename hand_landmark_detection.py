@@ -1,7 +1,5 @@
-/import cv2
+import cv2
 import time
-# import math
-# import random
 import numpy as np
 import mediapipe as mp
 
